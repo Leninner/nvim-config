@@ -7,13 +7,7 @@ return {
       "luacheck",
       "shellcheck",
       "shfmt",
-      "gofmt",
       "typescript-language-server",
     })
-
-    return {
-      cmd = { "mason", "lsp" },
-      ft = { "mason" },
-    }
   end,
 }

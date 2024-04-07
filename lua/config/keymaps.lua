@@ -42,7 +42,19 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
+-- Go to the beginning or end of line
+keymap.set("n", "L", "$")
+keymap.set("n", "H", "^")
+
 -- Diagnostic
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
+
+-- Move lines up and down
+keymap.set("n", "<A-j>", ":m+<CR>==", opts)
+keymap.set("n", "<A-k>", ":m-2<CR>==", opts)
+keymap.set("i", "<A-k>", "<Esc>:m-2<CR>==gi", opts)
+keymap.set("i", "<A-j>", "<Esc>:m+<CR>==gi", opts)
+keymap.set("v", "<A-k>", ":m-2<CR>gv=gv", opts)
+keymap.set("v", "<A-j>", ":m'>+<CR>gv=gv", opts)

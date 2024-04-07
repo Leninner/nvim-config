@@ -1,4 +1,4 @@
-# 💤 LazyVim
+# 💤 LazyVim for Leninner
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+This config is a [devaslife youtube video extension](https://www.youtube.com/watch?v=fFHlfbKVi30&t=976s) customized for my personal use. Feel free to use it.
+

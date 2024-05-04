@@ -53,17 +53,14 @@ end, opts)
 
 -- Move lines up and down
 keymap.set("n", "<A-j>", ":m+<CR>==", opts)
+keymap.set("i", "<A-j>", "<Esc>:m+<CR>==gi", opts)
+keymap.set("v", "<A-j>", ":m'>+<CR>gv=gv", opts)
+keymap.set("n", "<A-down>", ":m+<CR>==", opts)
+
 keymap.set("n", "<A-k>", ":m-2<CR>==", opts)
 keymap.set("i", "<A-k>", "<Esc>:m-2<CR>==gi", opts)
-keymap.set("i", "<A-j>", "<Esc>:m+<CR>==gi", opts)
 keymap.set("v", "<A-k>", ":m-2<CR>gv=gv", opts)
-keymap.set("v", "<A-j>", ":m'>+<CR>gv=gv", opts)
-
--- Select multiple lines with Shift + j or k
-keymap.set("n", "<S-j>", ':<C-u>execute "normal! V" . (v:count1) . "k"<CR>', opts)
-keymap.set("n", "<S-up>", ':<C-u>execute "normal! V" . (v:count1) . "k"<CR>', opts)
-keymap.set("n", "<S-k>", ':<C-u>execute "normal! V" . (v:count1) . "j"<CR>', opts)
-keymap.set("n", "<S-down>", ':<C-u>execute "normal! V" . (v:count1) . "j"<CR>', opts)
+keymap.set("n", "<A-up>", ":m-2<CR>==", opts)
 
 -- Rename all occurrences
-keymap.set("n", "<leader>rn", ":IncRename ", opts)
+keymap.set("n", "<leader>rn", ":IncRename")

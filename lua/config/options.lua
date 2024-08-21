@@ -9,4 +9,7 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 -- Search and replace
 vim.opt.ignorecase = true -- search case insensitive
 vim.opt.smartcase = true -- search matters if capital letter is used
-vim.opt.inccommand = "split" -- for incsearch while sub
+vim.opt.inccommand = "split" -- for incsearch whiile sub
+
+vim.opt.sw = 2
+vim.opt.ruler = true

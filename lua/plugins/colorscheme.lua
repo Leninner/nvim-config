@@ -1,7 +1,17 @@
 return {
-  "folke/tokyonight.nvim",
-  priority = 1000,
-  opts = {
-    transparent = true,
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    name = "tokyonight",
+    priority = 999,
+    opts = {
+      transparent = true,
+    },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "tokyonight",
+    },
   },
 }

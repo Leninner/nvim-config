@@ -15,7 +15,6 @@ return {
         "typescript",
         "yaml",
         "java",
-        "rust",
         "sql",
       },
     },

@@ -5,7 +5,7 @@ function M.cowboy()
   local id
   local ok = true
 
-  for _, key in ipairs({ "h", "j", "k", "l", "+", "-", "w", "b" }) do
+  for _, key in ipairs({ "h", "j", "k", "l", "+", "-" }) do
     local count = 0
     local timer = assert(vim.loop.new_timer())
     local map = key
@@ -15,7 +15,7 @@ function M.cowboy()
         count = 0
       end
 
-      if count >= 10 then
+      if count >= 25 then
         ok, id = pcall(vim.notify, "Hold it cowboy!", vim.log.levels.WARN, {
           icon = "🤠",
           replace = id,

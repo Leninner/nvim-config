@@ -4,9 +4,6 @@ return {
     lazy = true,
     name = "tokyonight",
     priority = 999,
-    opts = {
-      transparent = true,
-    },
   },
   {
     "LazyVim/LazyVim",

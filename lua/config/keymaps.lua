@@ -10,23 +10,8 @@ oil.setup()
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
--- Increment / decrement
-keymap.set("n", "+", "<C-a>")
-keymap.set("n", "-", "<C-x>")
-
--- Delete a word backwards
-keymap.set("n", "dw", "vb_d")
-
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
-
--- Jumplist
-keymap.set("n", "<C-m>", "<C-i>", opts)
-
--- New tab
-keymap.set("n", "te", ":tabedit", opts)
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
@@ -46,12 +31,7 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Go to the beginning or end of line
 keymap.set("n", "L", "$")
-keymap.set("n", "H", "^")
-
--- Diagnostic
-keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
-end, opts)
+keymap.set("n", "H", "0")
 
 ----- OIL -----------
 -- Navigate between buffers
@@ -77,4 +57,6 @@ keymap.set("v", "<A-k>", ":m-2<CR>gv=gv", opts)
 keymap.set("n", "<A-up>", ":m-2<CR>==", opts)
 
 -- Rename all occurrences
-keymap.set("n", "<leader>rn", ":IncRename")
+keymap.set("n", "<leader>rn", function()
+  return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true })

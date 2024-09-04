@@ -2,8 +2,10 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local oil = require("oil")
 local discipline = require("leninner.discipline")
 discipline.cowboy()
+oil.setup()
 
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
@@ -50,6 +52,18 @@ keymap.set("n", "H", "^")
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
+
+----- OIL -----------
+-- Navigate between buffers
+keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- Delete all buffers but the current one
+keymap.set(
+  "n",
+  "<leader>bq",
+  '<Esc>:%bdelete|edit #|normal`"<Return>',
+  { desc = "Delete other buggers but the current one" }
+)
 
 -- Move lines up and down
 keymap.set("n", "<A-j>", ":m+<CR>==", opts)

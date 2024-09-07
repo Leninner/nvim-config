@@ -1,5 +1,10 @@
 return {
   {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000,
+    name = "onedark_vivid",
+  },
+  {
     "folke/tokyonight.nvim",
     lazy = true,
     name = "tokyonight",
@@ -8,7 +13,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "onedark_vivid",
     },
   },
 }

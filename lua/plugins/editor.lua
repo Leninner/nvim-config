@@ -1,6 +1,7 @@
+-- Disable flash when yanking text
 return {
   {
     "folke/flash.nvim",
-    enabled = false,
+    enabled = true,
   },
 }

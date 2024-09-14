@@ -48,3 +48,7 @@ keymap.set("n", "<A-k>", ":m-2<CR>==", opts)
 keymap.set("i", "<A-k>", "<Esc>:m-2<CR>==gi", opts)
 keymap.set("v", "<A-k>", ":m-2<CR>gv=gv", opts)
 keymap.set("n", "<A-up>", ":m-2<CR>==", opts)
+
+----------- MOVE SCREEN -----------
+keymap.set("n", "<C-u>", "<C-u>zz", opts) -- zz to keep cursor in the middle
+keymap.set("n", "<C-d>", "<C-d>zz", opts) -- zz to keep cursor in the middle

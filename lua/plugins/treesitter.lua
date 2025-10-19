@@ -5,7 +5,7 @@ return {
       ensure_installed = {
         "cmake",
         "bash",
-        "gitignore",
+        "gitignore", 
         "go",
         "javascript",
         "json",
@@ -17,6 +17,7 @@ return {
         "java",
         "sql",
       },
+      auto_install = false,
     },
   },
 }

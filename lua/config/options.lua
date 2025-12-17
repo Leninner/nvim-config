@@ -14,3 +14,4 @@ opt.inccommand = "split" -- for incsearch while sub
 
 opt.sw = 2
 opt.ruler = true
+opt.cursorline = true

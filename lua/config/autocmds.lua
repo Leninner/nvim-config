@@ -16,3 +16,18 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.wo.conceallevel = 0
   end,
 })
+
+-- Set orange color for cursor line number with enhanced visibility
+local function set_cursorline_color()
+  vim.api.nvim_set_hl(0, "CursorLineNr", {
+    fg = "#FF8800",
+    underline = false,
+  })
+end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = set_cursorline_color,
+})
+
+set_cursorline_color()

@@ -6,8 +6,10 @@ local oil = require("oil")
 local harpoon = require("harpoon")
 
 harpoon:setup()
-local discipline = require("leninner.discipline")
-discipline.cowboy()
+-- COMMENTED OUT FOR NOW BECAUSE IT'S NOT NEEDED
+
+-- local discipline = require("leninner.discipline")
+-- discipline.cowboy()
 oil.setup()
 
 local keymap = vim.keymap

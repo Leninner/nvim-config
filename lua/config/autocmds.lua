@@ -31,3 +31,16 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 set_cursorline_color()
+
+-- Disable diagnostics at startup
+vim.api.nvim_create_autocmd("VimEnter", {
+  pattern = "*",
+  callback = function()
+    vim.diagnostic.config({
+      virtual_text = false,
+      signs = false,
+      underline = false,
+      update_in_insert = false,
+    })
+  end,
+})

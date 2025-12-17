@@ -15,3 +15,10 @@ opt.inccommand = "split" -- for incsearch while sub
 opt.sw = 2
 opt.ruler = true
 opt.cursorline = true
+
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = false,
+  underline = false,
+  update_in_insert = false,
+})
